@@ -1,0 +1,170 @@
+.app {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.title {
+  margin: 0.25rem 0 1.25rem;
+  color: var(--text-muted);
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-link {
+  background: none;
+  border: none;
+  padding: 0.6rem 1.1rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+  color: var(--text-muted);
+  border-bottom: 2px solid transparent;
+}
+
+.nav-link:hover {
+  color: var(--text);
+}
+
+.nav-link.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.summary {
+  font-size: 1.05rem;
+  color: var(--text);
+}
+
+.contact-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+.contact-row a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.contact-row a:hover {
+  text-decoration: underline;
+}
+
+h2 {
+  font-size: 1.1rem;
+  margin: 2rem 0 0.75rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.4rem;
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skill-list li {
+  background: var(--chip-bg);
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+}
+
+.entry {
+  margin-bottom: 1.25rem;
+}
+
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+}
+
+.entry-header span {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.entry-subheader {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 0.35rem;
+}
+
+.entry ul {
+  margin: 0.25rem 0 0;
+  padding-left: 1.2rem;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
+.project-card {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.25rem;
+}
+
+.project-card h3 {
+  margin: 0 0 0.5rem;
+}
+
+.project-card p {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  margin: 0 0 0.85rem;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.9rem;
+}
+
+.tag {
+  background: var(--chip-bg);
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.project-links a {
+  color: var(--accent);
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.project-links a:hover {
+  text-decoration: underline;
+}
