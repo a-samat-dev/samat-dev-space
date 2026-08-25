@@ -1,6 +1,10 @@
 const TABS = [
   { id: "resume", label: "Resume" },
-  { id: "projects", label: "Projects" },
+  { id: "projects", label: "Demo Projects" },
+  { id: "dsa", label: "Data Structures & Algorithms" },
+  { id: "systemDesign", label: "System Design" },
+  { id: "aiEngineering", label: "AI Engineering" },
+  { id: "hobbies", label: "Hobbies" },
 ];
 
 export default function Nav({ active, onChange }) {

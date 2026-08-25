@@ -1,9 +1,22 @@
 import { useState } from "react";
 import Nav from "./components/Nav";
 import Resume from "./components/Resume";
-import Projects from "./components/Projects";
+import CardGrid from "./components/CardGrid";
 import { resume } from "./data/resume";
+import { projects } from "./data/projects";
+import { dsa } from "./data/dsa";
+import { systemDesign } from "./data/systemDesign";
+import { aiEngineering } from "./data/aiEngineering";
+import { hobbies } from "./data/hobbies";
 import "./App.css";
+
+const SECTIONS = {
+  projects,
+  dsa,
+  systemDesign,
+  aiEngineering,
+  hobbies,
+};
 
 export default function App() {
   const [tab, setTab] = useState("resume");
@@ -17,7 +30,7 @@ export default function App() {
       </header>
 
       <main className="main">
-        {tab === "resume" ? <Resume /> : <Projects />}
+        {tab === "resume" ? <Resume /> : <CardGrid items={SECTIONS[tab]} />}
       </main>
     </div>
   );

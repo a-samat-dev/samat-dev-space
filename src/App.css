@@ -1,5 +1,5 @@
 .app {
-  max-width: 760px;
+  max-width: 1090px;
   margin: 0 auto;
   padding: 2.5rem 1.5rem 4rem;
 }
@@ -21,16 +21,18 @@
 
 .nav {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 0.25rem 0.5rem;
   border-bottom: 1px solid var(--border);
 }
 
 .nav-link {
   background: none;
   border: none;
-  padding: 0.6rem 1.1rem;
-  font-size: 0.95rem;
+  padding: 0.6rem 0.85rem;
+  font-size: 0.88rem;
+  white-space: nowrap;
   cursor: pointer;
   color: var(--text-muted);
   border-bottom: 2px solid transparent;
@@ -75,6 +77,16 @@ h2 {
   padding-bottom: 0.4rem;
 }
 
+.skill-group {
+  margin-bottom: 1rem;
+}
+
+.skill-group-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 0.4rem;
+}
+
 .skill-list {
   display: flex;
   flex-wrap: wrap;
@@ -93,6 +105,12 @@ h2 {
 
 .entry {
   margin-bottom: 1.25rem;
+}
+
+.entry-text {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin: 0.25rem 0 0;
 }
 
 .entry-header {
