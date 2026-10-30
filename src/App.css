@@ -186,3 +186,241 @@ h2 {
 .project-links a:hover {
   text-decoration: underline;
 }
+
+/* System Design: menu on the left, the selected design on the right */
+
+.design {
+  display: grid;
+  grid-template-columns: 190px minmax(0, 1fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+.design-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  position: sticky;
+  top: 1.5rem;
+}
+
+.design-menu-item {
+  background: none;
+  border: none;
+  border-left: 2px solid var(--border);
+  padding: 0.5rem 0.85rem;
+  font: inherit;
+  font-size: 0.92rem;
+  text-align: left;
+  cursor: pointer;
+  color: var(--text-muted);
+}
+
+.design-menu-item:hover {
+  color: var(--text);
+}
+
+.design-menu-item.active {
+  color: var(--accent);
+  border-left-color: var(--accent);
+}
+
+.design-page h2 {
+  margin-top: 0;
+}
+
+.design-description {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin: 0 0 0.85rem;
+}
+
+@media (max-width: 720px) {
+  .design {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.25rem;
+  }
+
+  .design-menu {
+    position: static;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .design-menu-item {
+    border-left: none;
+    border-bottom: 2px solid var(--border);
+  }
+
+  .design-menu-item.active {
+    border-bottom-color: var(--accent);
+  }
+}
+
+/* Buttons */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.45rem 0.95rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--text);
+  font: inherit;
+  font-size: 0.88rem;
+  line-height: 1.3;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.btn:hover:not(:disabled) {
+  border-color: var(--text-muted);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--on-accent);
+}
+
+.btn-primary:hover:not(:disabled) {
+  border-color: var(--accent);
+  filter: brightness(1.08);
+}
+
+.btn-danger {
+  border-color: var(--danger);
+  color: var(--danger);
+}
+
+.btn-danger:hover:not(:disabled) {
+  border-color: var(--danger);
+  background: var(--chip-bg);
+}
+
+/* URL shortener lab */
+
+.lab {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 0.5rem;
+}
+
+.lab-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.lab-panels {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.25rem;
+}
+
+.lab-panel {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.25rem;
+}
+
+.lab-panel h3 {
+  font-size: 1rem;
+  margin: 0 0 0.35rem;
+}
+
+.lab-hint {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  margin: 0 0 1rem;
+}
+
+.lab-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.lab-controls label {
+  font-size: 0.9rem;
+}
+
+.lab-controls input {
+  width: 6.5rem;
+  padding: 0.45rem 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--text);
+  font: inherit;
+  font-size: 0.9rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.lab-controls input[aria-invalid="true"] {
+  border-color: var(--danger);
+}
+
+.lab-message {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin: 0.6rem 0 0;
+}
+
+.lab-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 0.85rem 1rem;
+  margin-top: 1.1rem;
+}
+
+.lab-stat-label {
+  color: var(--text-muted);
+  font-size: 0.78rem;
+}
+
+.lab-stat-value {
+  font-size: 1.25rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Inside the two simulation panels every row of numbers shares one four-column grid. */
+.lab-panels .lab-stats {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.lab-panels .lab-stat-value {
+  font-size: 1.05rem;
+}
+
+@media (max-width: 420px) {
+  .lab-panels .lab-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.lab-clear {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.88rem;
+}
+
+.lab-notice {
+  color: var(--text-muted);
+}

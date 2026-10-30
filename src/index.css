@@ -5,6 +5,8 @@
   --border: #e5e7eb;
   --chip-bg: #f3f4f6;
   --accent: #7c3aed;
+  --on-accent: #ffffff;
+  --danger: #b42318;
 
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
 
@@ -26,6 +28,8 @@
     --border: #2e303a;
     --chip-bg: #1f2028;
     --accent: #c084fc;
+    --on-accent: #14151a;
+    --danger: #f97066;
   }
 }
 

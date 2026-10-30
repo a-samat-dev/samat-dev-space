@@ -14,7 +14,7 @@ export const resume = {
   skillGroups: [
     {
       category: "Languages",
-      items: ["Java (Expert)", "JavaScript (Intermediate)", "Python (Basic)"],
+      items: ["Java (Expert)", "JavaScript (Intermediate)", "Python (Advanced)"],
     },
     {
       category: "Backend",
